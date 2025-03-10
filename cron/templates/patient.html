@@ -1,0 +1,156 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="{% static 'css/patient.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/sliders.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/zmenu.css' %}">
+    <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css' %}">
+
+
+</head>
+
+<body>
+
+    <div class="oneline">
+        <div>
+            <div class="topnav">
+                <a class="active" href="index.html">Home</a>
+                <a href="service.html">Services</a>
+                <a href="contact.html">Contact</a>
+                <a href="about.html">About</a>
+                <div>
+
+                    <img src="{% static 'images/login.png' %}" alt="icon">
+                    <a class="w" href="login.html">Log-Out</a>
+
+                </div>
+
+
+
+            </div>
+        </div>
+        <div></div>
+    </div>
+    <section>
+
+
+        <head>
+            <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+        </head>
+
+        <div class="container">
+            <form method="POST" action="temp.html">
+                {% csrf_token %}
+
+
+                <div class="form" id="survey-form1">
+
+
+
+                    <header class="h"> Your Test Result</header>
+
+                    <div class="input-control">
+                        {{r}}
+
+                    </div>
+                    <div class="form-group1">
+
+                        <a href="login.html"> <button type="button" id="next">Logout</button></a>
+                        <button type="button" id="appo"><span>Appointment</span></button>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+
+                    </div>
+
+                </div>
+                <div class="form" id="survey-form2">
+                    <header class="h"> Appointment Form</header>
+                    <div class="form-group">
+                        <label id="name-label" for="name">Name*</label>
+
+                        <input type="text" class="input-controlx" placeholder="Enter Your Name" name="name2" value="{{name2}}">
+                    </div>
+                    <div class="form-group">
+                        <label id="name-label" for="name">Email-Id*</label>
+
+                        <input type="text" class="input-controlx" placeholder="Enter Your Email-id" name="email2" value="{{email2}}">
+                    </div>
+                    <div class="form-group">
+                        <label id="name-label" for="name">Phone-Number</label>
+
+                        <input type="text" class="input-controlx" placeholder="Enter Your Valid number" name="mob2" value="{{mob2}}">
+                    </div>
+
+                    <div class="form-group">
+                        <label id="name-label" for="name">Address</label>
+
+                        <input type="text" class="input-controlx" placeholder="City" name="addr" value="{{ad2}}">
+                    </div>
+                    <div class="form-group">
+
+
+                        <label id="name-label" for="select">Doctors Available</label>
+
+                        <select id="select" class="input-controlx" name="doc">
+                            
+                           
+                            {%for i in b%}
+                            <option value="{{i}}" >{{i}}</option>
+                            {%endfor%}
+                           
+                          </select>
+
+
+
+
+                    </div>
+
+
+
+
+                    <button type="submit"><span>Submit</span></button>
+
+
+
+                </div>
+
+
+
+            </form>
+        </div>
+
+
+        <script>
+            var form1 = document.getElementById("survey-form1");
+            var form2 = document.getElementById("survey-form2");
+
+            var next = document.getElementById("appo");
+
+            next.onclick = function() {
+
+                form1.style.left = "-500px";
+                form2.style.left = "-40px";
+                form1.style.top = "-400px";
+                form2.style.top = "-400px";
+
+            }
+        </script>
+
+
+
+    </section>
+
+
+</body>
+
+</html>

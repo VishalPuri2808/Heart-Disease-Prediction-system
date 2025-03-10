@@ -1,0 +1,137 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/athn.css' %}">
+    <link rel="stylesheet" src="{% static 'js/new.js' %}">
+
+    <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css' %}">
+
+
+</head>
+
+<body>
+    <div class="oneline">
+        <div>
+            <div class="topnav">
+                <a class="active" href="index.html">Home</a>
+                <a href="service.html">Services</a>
+                <a href="contact.html">Contact</a>
+                <a href="about.html">About</a>
+                <div>
+
+                    <img src="{% static 'images/login.png' %}" alt="icon">
+                    <a class="w" href="login.html">Log-In</a>
+
+                </div>
+
+
+
+            </div>
+        </div>
+        <div></div>
+    </div>
+    <form method="POST" action="login.html" onsubmit="return password(this)">
+        {% csrf_token %}
+
+        <section class="forms-section">
+            <div class="forms">
+                <div class="form-wrapper is-active">
+                    <button type="button" class="switcher switcher-login">
+              
+              <span class="underline"></span>
+            </button>
+                    <div class="form form-login" id="form1">
+                        <fieldset>
+                            <h1 class="hed1">Sign Up</h1>
+                            <script>
+                                function password(form) {
+                                    var pass1 = form.password1.value;
+                                    var pass2 = form.password2.value;
+
+
+                                    if (pass1 != pass2) {
+
+                                        alert("Password did not match");
+                                        return false;
+                                    } else {
+
+                                        return true;
+                                    }
+
+                                }
+                            </script>
+                            <legend>Please, enter your email and password for login.</legend>
+                            <div class="input-block">
+                                <label for="login-email" id="q">E-mail</label>
+                                <input id="login-email" type="email" name="email" oninput="" required>
+                            </div>
+                            <div class="input-block">
+                                <label for="login-password" id="q">Password</label>
+                                <input id="login-password" type="password" name="password1" required>
+                            </div>
+                            <div class="input-block">
+                                <label for="signup-password-confirm" id="q">Confirm password</label>
+                                <input id="signup-password-confirm" type="password" name="password2" required>
+                            </div>
+
+
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="form-wrapper">
+                    <div class="form form-signup">
+
+
+                    </div>
+                </div>
+                <div class="form-wrapper is-active" id="frm">
+                    <button type="button" class="switcher switcher-login">
+             
+              <span class="underline"></span>
+            </button>
+                    <div class="form form-login" id="form2">
+                        <h1 class="hed2"> Personal details</h1>
+
+                        <fieldset>
+                            <legend>Please, enter your email and password for login.</legend>
+                            <div class="input-block">
+                                <label for="reg-number" id="q">Phone Number</label>
+                                <input id="reg-number" type="text" required placeholder="091" value="+91" name="mob">
+                            </div>
+                            <div class="input-block">
+                                <label for="reg-add" id="q">Address</label>
+                                <input id="reg-add" type="text" required placeholder="City" name="addr">
+                            </div>
+
+
+                            <div class="input-block">
+                                <label for="select" id="q">Type</label>
+                                <select name="typ" id="cars">
+                    <option value="Patient">Patient</option>
+                    <option value="Doctor">Doctor</option>
+                   
+                   
+                  </select>
+                            </div>
+                        </fieldset>
+                        <button type="submit" class="btn-login" onclick="">Register</button>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+        </section>
+    </form>
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,229 @@
+<html>
+
+<head>
+    <title> My New Blog </title>
+    <style>
+        p {
+            padding: 5px 5px 15px 10px;
+            border: 1px dashed rgb(255, 0, 0);
+            margin: 1px;
+        }
+        
+        body {
+            color: rgb(60, 255, 0);
+            background-color: black;
+        }
+        
+        h1 {
+            color: red;
+        }
+        
+        h2 {
+            color: magenta;
+            font: italic small-caps bolder 28px arial, sans-serif;
+        }
+        
+        h3 {
+            color: brown;
+            font-style: normal;
+        }
+        
+        h4 {
+            color: brown
+        }
+        
+        ol {
+            color: aliceblue
+        }
+        
+        ul {
+            color: silver;
+            font-style: normal;
+        }
+        
+        #left {
+            float: left;
+            padding: 0px;
+            border: none;
+        }
+        
+        #right {
+            float: left;
+            padding: 0px;
+            border: none;
+        }
+        
+        #background-image {
+            background-image: url("https://cdn.wallpapersafari.com/7/20/RicFO9.jpg");
+        }
+        
+        #content {
+            background-color: rgb(0, 0, 0.7);
+            max-width: 450px;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+        
+        table {
+            width: 100%;
+            border: 2px solid;
+            border-collapse: collapse;
+        }
+        
+        th,
+        td {
+            border: 1px solid;
+            padding: 15px;
+        }
+        
+        td {
+            text-align: center;
+            padding: 10px;
+        }
+        
+        th {
+            text-align: left;
+            background-color: rgba(119, 95, 95, 0.479);
+        }
+        
+        nav {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        nav li {
+            font-size: large;
+            display: block;
+            padding: 14px 16px;
+            float: right;
+        }
+        
+        .logo {
+            padding: 15px;
+            float: left;
+        }
+        
+        #header {
+            padding: 5px 0px;
+        }
+        
+        a:link {
+            color: red;
+        }
+        
+        a:visited {
+            color: yellow
+        }
+        
+        a:hover {
+            color: blue
+        }
+        
+        a:active {
+            color: green
+        }
+        
+        li:nth-child(even) {
+            background-color: ;
+        }
+        
+        li:nth-child(odd) {
+            background-color: ;
+        }
+        
+        li:hover {
+            background-color: grey;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <a href="#" class="logo">
+            <img src="data:image/jpeg;base64,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">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#Information">Information</a></li>
+                <li><a href="#left">Rules you must read</a></li>
+                <li><a href="#Form">Register</a></li>
+            </ul>
+        </nav>
+    </div>
+    <h1> <u>Welcome To New World</u> </h1>
+
+    <h2> DEATH NOTE</h2>
+    <div id="left">
+        <h3>Rules you must <u>read</u> before using </h3>
+        <ul>
+            <li>Once the person had written names then the person <br>should continue writing if stoped then be ready to face death in 13 days.</li>
+            <li>The human whose name is written in this note shall die.</li>
+            <li>You should mention reason of death or<br> he/she will die of heartattack within 40sec.</li>
+            <li>After writing the cause of death, details of the death should be written in <br> the next 6 minutes and 40 seconds.</li>
+
+        </ul>
+    </div>
+    <div id="right">
+        <p style="font-family:Georgia, 'Times New Roman', Times, serif; font-size: large ;">
+            Enter Name =<br> Enter crime =<br> Enter Address =<br> We will take care of it <br>
+            <b> Happy </b>to see you here. If you want to follow your ideal <a href="https://www.instagram.com/btw_its_tejas_/" target="_blank"> click here </a> <br> And here you can make your <b> Death Wish </b> as per your choice:)
+        </p>
+    </div>
+    <div id="background-image">
+        <centre>
+            <div id="content">
+                <h4> <b>Shimigami</b> - God of Death</h4>
+                <ol>
+                    <li>God of death loves apple.</li>
+                    <li>God of death is visible to only to one who carries death-note.</li>
+                </ol>
+            </div>
+        </centre>
+    </div>
+    <div id="Information">
+        <h3>Information</h3>
+        <table>
+
+            <tbody>
+                <tr>
+                    <th>Names</th>
+                    <th>Crime</th>
+                    <th>Address</th>
+
+                </tr>
+                <tr>
+                    <td>Arjun</td>
+                    <td>......</td>
+                    <td>.......</td>
+                </tr>
+                <tr>
+                    <td>Ankush</td>
+                    <td>.....</td>
+                    <td>.....</td>
+                </tr>
+                <tr>
+                    <td>Aakash</td>
+                    <td>.....</td>
+                    <td>.....</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+    <div id="Form">
+        <h1 style="padding: 20px; margin: 20px;">FORM </h1>
+        <form>First Name <input type="text" placeholder="Enter First Name" name="First name"><br><br> Middle Name <input type="text" placeholder="Enter Middle Name" name="Middle name"> <br><br> Last Name <input type="text" placeholder="Enter last Name" name="Last name"><br><br>            Age
+            <input type="number" placeholder="Age" name="Age" min="18" max="99">
+            <br><br>
+            <input type="radio" name="Gender" value="Male"> Male
+            <input type="radio" name="Gender" value="Female">Female
+            <input type="radio" name="Gender" value="Other"> Other
+            <br><br> Already registered? <input type="checkbox" name="checkbox" value="yes">Yes
+            <input type="checkbox" name="checkbox" value="No">No<br><br>
+            <input type="submit">
+        </form>
+    </div>
+</body>
+
+</html>

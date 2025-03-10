@@ -1,0 +1,587 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="{% static 'css/entry.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/sliders.css' %}">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css' %}">
+
+
+</head>
+
+<body>
+    <div class="oneline">
+        <div>
+            <div class="topnav">
+                <a class="active" href="index.html">Home</a>
+                <a href="service.html">Services</a>
+                <a href="contact.html">Contact</a>
+                <a href="about.html">About</a>
+                <div>
+
+                    <img src="{% static 'images/login.png' %}" alt="icon">
+                    <a class="w" href="login.html">Log-In</a>
+
+                </div>
+
+
+
+            </div>
+        </div>
+        <div></div>
+    </div>
+
+
+
+    <section>
+
+
+
+
+
+
+
+        <div class="container">
+            <form method="POST" action="patient.html">
+                {% csrf_token %}
+
+                <div class="form" id="survey-form1">
+                    <header class="h"> Enter Medical Details</header>
+
+
+                    <div class="pageHolder">
+                        <div class="floatoneline">
+                            <div class="form-group">
+                                <label id="name-label" for="name">Email-ID</label>
+                                <input type="text" name="email1" id="email1" class="input-control" value="{{email1}}" required />
+                            </div>
+
+                            <div>
+                                <label id="number-label" for="number">Age</label>
+
+                                <div class="range" title="Age in years">
+                                    <div class="sliderValue">
+                                        <span>100</span>
+                                    </div>
+                                    <div class="field">
+                                        <input type="range" min="0" max="120" value="55" steps="1" id="slider" name="ag">
+
+                                        <div id="selector"> </div>
+                                        <div class="SelectBtn"></div>
+                                        <div id="selectvalue" name=" age"></div>
+                                    </div>
+                                </div>
+                                <script>
+                                    var slider = document.getElementById("slider");
+                                    var selector = document.getElementById("selector");
+                                    var selectvalue = document.getElementById("selectvalue");
+                                    var progressbar = document.getElementById("progressbar");
+
+                                    selectvalue.innerHTML = slider.value;
+
+                                    slider.oninput = function() {
+                                        selectvalue.innerHTML = this.value;
+
+                                    }
+                                </script>
+                            </div>
+
+
+
+
+
+                            <div class="form-group">
+                                <label>Gender</label>
+
+                                <div class="range">
+                                    <div class="sliderValue">
+                                        <span>100</span>
+                                    </div>
+                                    <div class="field">
+                                        <div class="nme">Female</div>
+                                        <input type="range" min="0" max="1" value="0" steps="1" id="slider" name="gen">
+                                        <div class="nme">Male</div>
+                                        <div name=" sex"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="floatoneline">
+                            <div class="form-group">
+                                <label id="name-label" for="name">Name*</label>
+                                <input type="text" name="name" id="name" class="input-control" placeholder="Enter your name" required />
+                            </div>
+                            <div class="form-group">
+                                <label>Family history with any Heart Disease</label>
+
+                                <div class="range">
+                                    <div class="sliderValue">
+                                        <span>100</span>
+                                    </div>
+                                    <div class="field">
+                                        <div class="nme">No</div>
+                                        <input type="range" min="0" max="1" value="0" steps="1" id="slider">
+                                        <div class="nme">Yes</div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label id="number-label" for="number">The Fasting Blood sugar</label>
+
+                                <div class="range" title="(> 120 mg/dl)">
+                                    <div class="sliderValue">
+                                        <span>100</span>
+                                    </div>
+                                    <div class="field">
+                                        <div class="nme">False</div>
+                                        <input type="range" min="0" max="1" value="0" steps="1" id="slider5" name="bs">
+                                        <div class="nme">True</div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <div class="btn-box">
+                        <button type="button" id="next1">Next</button>
+                    </div>
+                </div>
+
+
+
+                <div class="form" id="survey-form2" action="result">
+                    <header class="h"> Enter Medical Details</header>
+                    <div class="pageHolder">
+                        <div class="floatoneline">
+                            <div>
+                                <label id="number-label" for="number">    ST depression induced by exercise relative to rest</label>
+
+                                <div class="range" title=" (‘ST’ relates to positions on the ECG plot.)">
+                                    <div class="sliderValue">
+                                        <span>100</span>
+                                    </div>
+                                    <div class="field">
+                                        <input type="range" min="0.00" max="6.20" value="0.80" steps="1" id="slider9" name="peak">
+
+                                        <div id="selector9"> </div>
+                                        <div class="SelectBtn9"></div>
+                                        <div id="selectvalue9"></div>
+                                    </div>
+                                </div>
+                                <script>
+                                    var slider9 = document.getElementById("slider9");
+                                    var selector9 = document.getElementById("selector9");
+                                    var selectvalue9 = document.getElementById("selectvalue9");
+                                    var progressbar = document.getElementById("progressbar9");
+
+                                    selectvalue9.innerHTML = slider9.value;
+
+                                    slider9.oninput = function() {
+                                        selectvalue9.innerHTML = this.value;
+
+                                    }
+                                </script>
+                            </div>
+
+                            <div>
+                                <label id="number-label" for="number">Chest pain</label>
+
+                                <div class="range" title="— Value 0: Asymptomatic
+                        — Value 1: Atypical angina
+                        — Value 2: Aon-anginal pain
+                        — Value 3: Typical angina">
+                                    <div class="sliderValue">
+                                        <span>100</span>
+                                    </div>
+                                    <div class="field">
+                                        <input type="range" min="0" max="3" value="0" steps="1" id="slider2" name="cp">
+
+                                        <div id="selector2"> </div>
+                                        <div class="SelectBtn2"></div>
+                                        <div id="selectvalue2"></div>
+                                    </div>
+                                </div>
+                                <script>
+                                    var slider2 = document.getElementById("slider2");
+                                    var selector2 = document.getElementById("selector2");
+                                    var selectvalue2 = document.getElementById("selectvalue2");
+                                    var progressbar = document.getElementById("progressbar");
+
+                                    selectvalue2.innerHTML = slider2.value;
+
+                                    slider2.oninput = function() {
+                                        selectvalue2.innerHTML = this.value;
+
+                                    }
+                                </script>
+                            </div>
+
+                            <div>
+                                <label id="number-label" for="number">Blood pressure</label>
+
+
+                                <div class="range" title="Person’s resting blood pressure (mm Hg)">
+                                    <div class="sliderValue">
+                                        <span>100</span>
+                                    </div>
+                                    <div class="field">
+                                        <input type="range" min="94" max="200" value="130" steps="2" id="slider3" name="bp">
+
+                                        <div id="selector3"> </div>
+                                        <div class="SelectBtn3"></div>
+                                        <div id="selectvalue3"></div>
+                                    </div>
+                                </div>
+                                <script>
+                                    var slider3 = document.getElementById("slider3");
+                                    var selector3 = document.getElementById("selector3");
+                                    var selectvalue3 = document.getElementById("selectvalue3");
+                                    var progressbar = document.getElementById("progressbar");
+
+                                    selectvalue3.innerHTML = slider3.value;
+
+                                    slider3.oninput = function() {
+                                        selectvalue3.innerHTML = this.value;
+
+                                    }
+                                </script>
+                            </div>
+
+
+
+
+
+
+
+                        </div>
+
+
+
+
+
+                        <div class="floatoneline">
+                            <div>
+                                <label id="number-label" for="number">Cholestrol</label>
+
+                                <div class="range" title="Cholesterol measurement in mg/dl">
+                                    <div class="sliderValue">
+                                        <span>100</span>
+                                    </div>
+                                    <div class="field">
+                                        <input type="range" min="126" max="564" value="200" steps="1" id="slider4" name="cho">
+
+                                        <div id="selector4"> </div>
+                                        <div class="SelectBtn4"></div>
+                                        <div id="selectvalue4"></div>
+                                    </div>
+                                </div>
+                                <script>
+                                    var slider4 = document.getElementById("slider4");
+                                    var selector4 = document.getElementById("selector4");
+                                    var selectvalue4 = document.getElementById("selectvalue4");
+                                    var progressbar = document.getElementById("progressbar");
+
+                                    selectvalue4.innerHTML = slider4.value;
+
+                                    slider4.oninput = function() {
+                                        selectvalue4.innerHTML = this.value;
+
+                                    }
+                                </script>
+                            </div>
+                            <div>
+                                <label id="number-label" for="number">Resting Electrocardiographic Results</label>
+
+                                <div class="range" title="— Value 0: Showing probable or definite left ventricular hypertrophy by Estes’ criteria
+                        — Value 1: Normal
+                        — Value 2: Having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV)">
+                                    <div class="sliderValue">
+                                        <span>100</span>
+                                    </div>
+                                    <div class="field">
+                                        <input type="range" min="0" max="2" value="0" steps="1" id="slider6" name="res">
+
+                                        <div id="selector6"> </div>
+                                        <div class="SelectBtn6"></div>
+                                        <div id="selectvalue6"></div>
+                                    </div>
+                                </div>
+                                <script>
+                                    var slider6 = document.getElementById("slider6");
+                                    var selector6 = document.getElementById("selector6");
+                                    var selectvalue6 = document.getElementById("selectvalue6");
+                                    var progressbar = document.getElementById("progressbar6");
+
+                                    selectvalue6.innerHTML = slider6.value;
+
+                                    slider6.oninput = function() {
+                                        selectvalue6.innerHTML = this.value;
+
+                                    }
+                                </script>
+                            </div>
+
+
+
+
+                            <div>
+                                <label id="number-label" for="number">Maximum Heart Rate Achieved</label>
+
+                                <div class="range">
+                                    <div class="sliderValue">
+                                        <span>100</span>
+                                    </div>
+                                    <div class="field">
+                                        <input type="range" min="71" max="202" value="153" steps="1" id="slider7" name="rat">
+
+                                        <div id="selector7"> </div>
+                                        <div class="SelectBtn7"></div>
+                                        <div id="selectvalue7"></div>
+                                    </div>
+                                </div>
+                                <script>
+                                    var slider7 = document.getElementById("slider7");
+                                    var selector7 = document.getElementById("selector7");
+                                    var selectvalue7 = document.getElementById("selectvalue7");
+                                    var progressbar = document.getElementById("progressbar");
+
+                                    selectvalue7.innerHTML = slider7.value;
+
+                                    slider7.oninput = function() {
+                                        selectvalue7.innerHTML = this.value;
+
+                                    }
+                                </script>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="btn-box">
+                        <button type="button" id="back">Back</button>
+                        <button type="button" id="next2">Next</button>
+                    </div>
+
+                </div>
+
+
+                <div class="form" id="survey-form3" action="result">
+
+                    <header class="h"> Enter Medical Details</header>
+
+
+
+
+
+                    <div class="pageHolder">
+                        <div class="floatoneline">
+                            <div>
+                                <label id="number-label" for="number"> Thalassemia Value</label>
+
+                                <div class="range" title="Value 1: Fixed defect (no blood flow in some part of the heart)
+                        Value 2: Normal blood flow
+                        Value 3: Reversible defect (a blood flow is observed but it is not normal)">
+                                    <div class="sliderValue">
+                                        <span>100</span>
+                                    </div>
+                                    <div class="field">
+
+                                        <input type="range" min="0" max="3" value="2" steps="1" id="slider12" name="thal">
+
+                                        <div id="selector12"> </div>
+                                        <div class="SelectBtn12"></div>
+                                        <div id="selectvalue12"></div>
+                                    </div>
+                                </div>
+                                <script>
+                                    var slider12 = document.getElementById("slider12");
+                                    var selector12 = document.getElementById("selector12");
+                                    var selectvalue12 = document.getElementById("selectvalue12");
+                                    var progressbar12 = document.getElementById("progressbar12");
+
+                                    selectvalue12.innerHTML = slider12.value;
+
+                                    slider12.oninput = function() {
+                                        selectvalue12.innerHTML = this.value;
+
+                                    }
+                                </script>
+                            </div>
+
+                            <div>
+                                <label id="number-label" for="number"> Exercise Induced Angina</label>
+
+                                <div class="range">
+                                    <div class="sliderValue">
+                                        <span>100</span>
+                                    </div>
+                                    <div class="field">
+                                        <div class="nme">No</div>
+                                        <input type="range" min="0" max="1" value="0" steps="1" id="slider8" name="ind">
+                                        <div class="nme">Yes</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="floatoneline">
+                            <div>
+                                <label id="number-label" for="number"> The slope of peak Exercise ST segment</label>
+
+                                <div class="range" title="0: Downsloping;   1: Flat;   2: Upsloping">
+                                    <div class="sliderValue">
+                                        <span>100</span>
+                                    </div>
+                                    <div class="field">
+                                        <div class="nme1">Down</div>
+                                        <input type="range" min="0" max="2" value="2" steps="1" id="slider10" name="slope">
+                                        <div class="nme1">Up</div>
+
+                                    </div>
+                                </div>
+                                <script>
+                                    var slider10 = document.getElementById("slider10");
+                                    var selector10 = document.getElementById("selector10");
+                                    var selectvalue10 = document.getElementById("selectvalue10");
+                                    var progressbar = document.getElementById("progressbar10");
+
+                                    selectvalue10.innerHTML = slider10.value;
+
+                                    slider10.oninput = function() {
+                                        selectvalue10.innerHTML = this.value;
+
+                                    }
+                                </script>
+                            </div>
+                            <div>
+                                <label id="number-label" for="number">The Number of Major vessels</label>
+
+                                <div class="range">
+                                    <div class="sliderValue">
+                                        <span>100</span>
+                                    </div>
+                                    <div class="field">
+
+                                        <input type="range" min="0" max="3" value="0" steps="1" id="slider11" name="vessels">
+
+                                        <div id="selector11"> </div>
+                                        <div class="SelectBtn11"></div>
+                                        <div id="selectvalue11"></div>
+                                    </div>
+                                </div>
+                                <script>
+                                    var slider11 = document.getElementById("slider11");
+                                    var selector11 = document.getElementById("selector11");
+                                    var selectvalue11 = document.getElementById("selectvalue11");
+                                    var progressbar11 = document.getElementById("progressbar11");
+
+                                    selectvalue11.innerHTML = slider11.value;
+
+                                    slider11.oninput = function() {
+                                        selectvalue11.innerHTML = this.value;
+
+                                    }
+                                </script>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <div class="form-group1">
+
+                        <button type="button" id="back1">Back</button>
+                        <button type="submit" id="submit" class="submit-button"><span>Predict</span></button>
+
+                    </div>
+
+                </div>
+
+                <div class="form" id="survey-form4">
+
+                    <header class="h"> Your result</header>
+                    <input type="text" name="reslt" id="reslt" class="input-control" value="{{resultx}}"> {{resultx}}
+
+
+
+
+
+
+
+                    <div class="form-group">
+
+                        <button type="button" id="back1">Back</button>
+                        <button type="button" class="submit-button "><span>Doctors</span></button>
+
+                    </div>
+
+                </div>
+
+
+
+            </form>
+        </div>
+
+
+        <script>
+            var form1 = document.getElementById("survey-form1");
+            var form2 = document.getElementById("survey-form2");
+            var form3 = document.getElementById("survey-form3");
+            var form4 = document.getElementById("survey-form4");
+
+            var next1 = document.getElementById("next1");
+            var next2 = document.getElementById("next2");
+            var back = document.getElementById("back");
+            var back1 = document.getElementById("back1");
+            var predict = document.getElementById("submit");
+
+            next1.onclick = function() {
+
+                form1.style.left = "-1600px";
+                form2.style.left = "-480px";
+
+            }
+
+            back.onclick = function() {
+
+                form1.style.left = "-480px";
+                form2.style.left = "750px";
+
+            }
+            next2.onclick = function() {
+
+                form2.style.left = "-1600px";
+                form3.style.left = "-480px";
+
+            }
+            back1.onclick = function() {
+
+                form2.style.left = "-480px";
+                form3.style.left = "750px";
+
+            }
+            predict.onclick = function() {
+
+
+            }
+        </script>
+
+
+
+    </section>
+
+
+</body>
+
+</html>

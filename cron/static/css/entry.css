@@ -1,0 +1,287 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+:root {
+    --color-background: hsl(191, 65%, 51%);
+    --color-form-alpha: rgba(10, 10, 10, 0.596);
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('../images/banner12.jpg');
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(5px);
+}
+
+.form {
+    background: var(--color-form-alpha);
+    padding: 2.5rem 0.623rem;
+    border-radius: 0.5rem;
+    left: -450px;
+    top: -350px;
+}
+
+@media (min-width: 440px) {
+    .form {
+        padding: 1.5rem;
+        overflow: hidden;
+    }
+}
+
+label {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+input,
+button,
+select,
+textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.h {
+    font-size: 22px;
+    color: rgb(250, 250, 246);
+    text-align: center;
+    line-height: 40px;
+    background: #00080ab9;
+    border-radius: 3rem;
+    padding: 0 0.313rem 0 0.313rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.container {
+    width: 90%;
+    margin: 0% auto;
+    position: relative;
+}
+
+.container .form {
+    width: 900px;
+    position: absolute;
+    transition: 0.5s;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.form-group1 {
+    margin: 5% auto 2rem auto;
+}
+
+.form-group {
+    margin: 0 auto;
+}
+
+.input-label {
+    font-size: 1rem;
+}
+
+.input-control {
+    display: block;
+    width: 100%;
+    height: 1.875rem;
+    padding: 1rem;
+    border-width: 0.2rem 0 0.2rem 0;
+    border-style: solid;
+    border-color: white;
+    border-radius: 1.25rem;
+    transition: border-bottom 0.12s ease-in-out;
+    margin: 0.5rem;
+}
+
+.input-control:focus {
+    outline: 0;
+    border-bottom: 0.2rem solid cyan;
+}
+
+.result {
+    display: block;
+    width: 60%;
+    height: 1.875rem;
+    padding: 1rem;
+    border-width: 0.2rem 0 0.2rem 0;
+    border-style: solid;
+    border-color: white;
+    border-radius: 1.25rem;
+    transition: border-bottom 0.12s ease-in-out;
+    margin-left: 4.5rem;
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.resuls:focus {
+    outline: 0;
+    border-bottom: 0.2rem solid cyan;
+}
+
+.info {
+    margin-left: 0.25rem;
+    font-size: 0.938rem;
+    font-weight: 400;
+}
+
+.input-select {
+    padding: 0.1rem 0 0 0.7rem;
+}
+
+.input-radio,
+.input-checkbox {
+    margin-right: 0.5rem;
+    margin-top: 0.0938rem;
+    min-height: 1rem;
+    min-width: 1rem;
+}
+
+.input-textarea {
+    min-height: 150px;
+    width: 100%;
+    padding: 1rem;
+    resize: vertical;
+}
+
+.submit-button {
+    width: 110px;
+    height: 35px;
+    margin: 0 10px;
+    background: linear-gradient(to top, #050505, #4b4b4b);
+    border-radius: 30px;
+    border: 0;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.submit-button:hover,
+.form button:hover {
+    box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btn-box {
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.form button {
+    width: 110px;
+    height: 35px;
+    margin: 0 10px;
+    background: linear-gradient(to top, #050505, #4b4b4b);
+    border-radius: 30px;
+    border: 0;
+    outline: none;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.oneline {
+    margin-top: -150px;
+    width: 1300px;
+    height: 100px;
+    border: none;
+    position: relative;
+}
+
+.topnav {
+    background-color: rgba(0, 0, 0, 0.726);
+    overflow: hidden;
+}
+
+
+/* Style the links inside the navigation bar */
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100px;
+}
+
+.topnav img {
+    margin-top: 13px;
+    float: right;
+    margin-right: 40px;
+}
+
+.topnav .w {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100px;
+}
+
+
+/* Change the color of links on hover */
+
+.topnav a:hover {
+    background-color: rgba(255, 254, 254, 0.438);
+    color: rgba(0, 0, 0, 0.952);
+    font-weight: bolder;
+}
+
+
+/* Add a color to the active/current link */
+
+.topnav a.active {
+    background-color: #5e5d5d91;
+    color: white;
+}
+
+#survey-form2 {
+    left: 1000px;
+}
+
+#survey-form3 {
+    left: 1000px;
+}
+
+#survey-form4 {
+    left: 1000px;
+    top: -300px;
+}
+
+.floatoneline {
+    float: left;
+    margin: 3%;
+}
+
+.pageHolder {
+    overflow: auto;
+    width: 100%;
+}

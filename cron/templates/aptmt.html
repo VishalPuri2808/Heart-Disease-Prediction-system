@@ -1,0 +1,136 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="{% static 'css/aptmt.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/sliders.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/zmenu.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css' %}">
+    <meta viewport width="device-width">
+
+</head>
+
+<body>
+    <div class="oneline">
+        <div>
+            <div class="topnav">
+                <a class="active" href="index.html">Home</a>
+                <a href="service.html">Services</a>
+                <a href="contact.html">Contact</a>
+                <a href="about.html">About</a>
+                <div>
+
+                    <img src="{% static 'images/login.png' %}" alt="icon">
+                    <a class="w" href="login.html">Log-In</a>
+
+                </div>
+
+
+
+            </div>
+        </div>
+        <div></div>
+    </div>
+
+
+
+    <section>
+
+
+
+
+
+
+
+        <div class="container">
+
+
+            <div class="form" id="survey-form1">
+                <header class="h"> Your Appointments - {{email1}}</header>
+
+
+                <div class="pageHolder">
+
+
+                    {%for k in det%}
+                    <div class="floatoneline">
+
+                        <div class="input-control">
+                            {{k.presult}}
+                        </div>
+
+                        <div>
+                            <label class=lbl>Name</label>
+                            <div class="txt">>{{k.pname}} </div>
+
+                        </div>
+                        <div>
+                            <label class=lbl>Age</label>
+                            <div class="txt">>{{k.page}}-Years </div>
+
+                        </div>
+                        <div>
+                            <label class=lbl>Cholestrol</label>
+                            <div class="txt">>{{k.pchol}}-mg/dl </div>
+
+                        </div>
+                        <div>
+                            <label class=lbl>Blood Pressure</label>
+                            <div class="txt">>{{k.ptrestbps}}-mmHg </div>
+
+                        </div>
+                        <div>
+                            <label class=lbl>Max heart rate achieved</label>
+                            <div class="txt">>{{k.pthalach}} </div>
+
+                        </div>
+                        <div>
+                            <label class=lbl>Thalassemia</label>
+                            <div class="txt">>{{k.pca}} </div>
+
+                        </div>
+                        <div>
+                            <label class=lbl>Max heart rate achieved</label>
+                            <div class="txt">>{{k.pthalach}} </div>
+
+                        </div>
+
+                    </div>
+                    {%endfor%}
+
+
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+            </form>
+        </div>
+
+
+
+
+
+
+    </section>
+
+
+</body>
+
+</html>

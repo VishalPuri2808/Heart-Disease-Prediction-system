@@ -1,0 +1,111 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="{% static 'css/athn.css' %}">
+    <link rel="stylesheet" src="{% static 'js/new.js' %}">
+
+    <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css' %}">
+
+</head>
+
+<body>
+    <div class="oneline">
+        <div>
+            <div class="topnav">
+                <a class="active" href="index.html">Home</a>
+                <a href="service.html">Services</a>
+                <a href="contact.html">Contact</a>
+                <a href="about.html">About</a>
+                <div>
+
+                    <img src="{% static 'images/login.png' %}" alt="icon">
+                    <a class="w" href="signup.html">Register</a>
+
+                </div>
+
+
+
+            </div>
+        </div>
+        <div></div>
+    </div>
+
+    <section class="forms-section">
+        <div class="forms">
+            <div class="form-wrapper is-active">
+                <button type="button" class="switcher switcher-login">
+              
+              <span class="underline"></span>
+            </button>
+
+                <form class="form form-login" method="POST" action="entry.html">
+                    {% csrf_token %}
+                    <h1 class="hed">Login</h1>
+                    <fieldset>
+                        <legend>Please, enter your email and password for login.</legend>
+                        <div class="input-block">
+                            <label id="q" for="login-email">E-mail</label>
+                            <input id="login-email" type="email" name="email" required>
+                        </div>
+                        <div class="input-block">
+                            <label id="q" for="login-password">Password</label>
+                            <input id="login-password" type="password" name="password" required>
+                        </div>
+                        <div class="input-block">
+                            <label id="q" for="select">Type</label>
+                            <select name="typ" id="cars">
+                    <option value="Patient">Patient</option>
+                    <option value="Doctor">Doctor</option>
+               
+                   
+                  </select>
+                        </div>
+                    </fieldset>
+                    <button type="submit" class="btn-login" onclick="entry.html">Login</button>
+
+                </form>
+
+            </div>
+
+            <div class="form-wrapper">
+                <button type="button" class="switcher switcher-signup" onclick="document.location='signup.html'">
+            <span class="underline"></span>
+            </button>
+
+                <form class="form form-signup">
+                    <fieldset>
+                        <legend>Please, enter your email, password and password confirmation for sign up.</legend>
+                        <div class="input-block">
+                            <label for="signup-email">E-mail</label>
+                            <input id="signup-email" type="email" required>
+                        </div>
+                        <div class="input-block">
+                            <label for="signup-password">Password</label>
+                            <input id="signup-password" type="password" required>
+                        </div>
+                        <div class="input-block">
+                            <label for="signup-password-confirm">Confirm password</label>
+                            <input id="signup-password-confirm" type="password" required>
+                        </div>
+                        <div class="input-block">
+                            <label for="select">Type</label>
+                            <select name="type" id="cars">
+                      <option value="Doctor">Doctor</option>
+                      <option value="Patient">Patient</option>
+                     
+                    </select>
+                        </div>
+                    </fieldset>
+                    <button type="submit" class="btn-signup">Continue</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>

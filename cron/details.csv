@@ -1,0 +1,20 @@
+Name,age,se,cp,trestbps,chol,fbs,restecg,thalach,exang,oldpeak,slope,ca,tha,result
+
+Vishal,20,1,0,109,200,0,0,116,0,1,1,0,1,Negative
+Vishal,20,1,0,109,200,0,0,116,0,1,1,0,1,Negative
+Vishal,20,1,0,109,200,0,0,116,0,1,1,0,1,Negative
+Rishi,20,1,0,111,200,0,0,153,0,1,1,0,2,Positive
+Rahul kumar,22,1,0,108,200,1,0,116,0,1,2,2,2,Negative
+vfbgnhm,55,0,0,130,200,0,0,153,0,1,2,0,2,Positive
+asda,55,0,0,130,200,0,0,153,0,1,2,0,2,Positive
+df,37,1,2,130,200,0,0,202,0,5,2,1,2,Negative
+Vishal puri,18,1,2,180,388,1,1,183,1,4,2,0,2,Negative
+Vishal puri,18,1,2,180,509,1,2,183,1,4,2,0,2,Negative
+Vishal puri,55,1,1,156,356,1,1,153,1,3,1,0,3,Positive
+Vishal,37,0,2,173,337,1,1,153,1,3,1,2,2,Positive
+Vishal,69,1,2,182,401,1,1,153,1,4,2,3,2,Negative
+Ram bharti,80,0,3,200,564,1,2,202,0,6,2,2,2,Positive
+Ram bharti,80,0,3,200,564,1,2,202,0,6,2,2,2,Negative
+Rahul,107,1,2,173,200,1,1,153,1,1,1,3,2,Positive
+Tejas mohan puri,17,1,1,130,200,0,0,153,0,2,1,2,2,Positive
+nklaacl,55,0,0,130,200,0,0,153,0,1,2,0,2,Positive
